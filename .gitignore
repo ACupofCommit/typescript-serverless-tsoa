@@ -7,3 +7,8 @@ jspm_packages
 
 # Webpack directories
 .webpack
+
+# tsoa
+/lib
+/src/routes.ts
+/src/swagger.json

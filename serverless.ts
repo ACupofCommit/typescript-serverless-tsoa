@@ -17,7 +17,9 @@ const serverlessConfiguration: AWS = {
   provider: {
     name: 'aws',
     runtime: 'nodejs12.x',
+    stage: '${opt:stage, "local"}',
     apiGateway: {
+      shouldStartNameWithService: true,
       minimumCompressionSize: 1024,
     },
     environment: {
@@ -26,12 +28,12 @@ const serverlessConfiguration: AWS = {
   },
   functions: {
     hello: {
-      handler: 'handler.hello',
+      handler: 'src/handler.index',
       events: [
         {
           http: {
             method: 'get',
-            path: 'hello',
+            path: '/{pathname+}'
           }
         }
       ]

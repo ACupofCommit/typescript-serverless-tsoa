@@ -4,16 +4,26 @@
   "description": "Serverless webpack example using Typescript",
   "main": "handler.js",
   "scripts": {
-    "dev": "sls offline start"
+    "dev": "sls offline start",
+    "tsoa": "ts-node -- tsoa.ts"
   },
   "dependencies": {
-    "source-map-support": "^0.5.19"
+    "aws-serverless-express": "^3.4.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "source-map-support": "^0.5.19",
+    "tsoa": "^3.4.0"
   },
   "devDependencies": {
     "@serverless/typescript": "^2.16.1",
     "@types/aws-lambda": "^8.10.68",
+    "@types/aws-serverless-express": "^3.3.3",
+    "@types/body-parser": "^1.19.0",
+    "@types/express": "^4.17.9",
     "@types/node": "^12.19.11",
+    "concurrently": "^5.3.0",
     "fork-ts-checker-webpack-plugin": "^6.0.0",
+    "nodemon": "^2.0.6",
     "serverless": "^2.16.1",
     "serverless-offline": "^6.8.0",
     "serverless-webpack": "^5.2.0",
