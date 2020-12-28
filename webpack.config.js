@@ -1,7 +1,9 @@
 const path = require('path');
+const webpack = require('webpack');
 const slsw = require('serverless-webpack');
 const nodeExternals = require('webpack-node-externals');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const { profileEnd } = require('console')
 
 module.exports = {
   context: __dirname,
@@ -44,6 +46,11 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.TST_SLS_STAGE': JSON.stringify(process.env.TST_SLS_STAGE),
+      'process.env.TST_REVISION': JSON.stringify(process.env.TST_REVISION),
+    }),
+
     // new ForkTsCheckerWebpackPlugin({
     //   eslint: true,
     //   eslintOptions: {

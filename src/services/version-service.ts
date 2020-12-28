@@ -4,7 +4,7 @@ export class VersionService {
   public get(): Version {
     return {
       node: process.version,
-      app: process.env.REVISION || 'maybe-local',
+      app: process.env.TST_REVISION || "Unknown-revision",
     }
   }
 }

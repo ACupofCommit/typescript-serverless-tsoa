@@ -17,7 +17,7 @@ const serverlessConfiguration: AWS = {
   provider: {
     name: 'aws',
     runtime: 'nodejs12.x',
-    stage: '${opt:stage, "local"}',
+    stage: '${env:TST_SLS_STAGE, "local"}',
     apiGateway: {
       shouldStartNameWithService: true,
       minimumCompressionSize: 1024,
