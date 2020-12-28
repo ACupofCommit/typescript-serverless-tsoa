@@ -10,7 +10,10 @@ const serverlessConfiguration: AWS = {
     }
   },
   // Add the serverless-webpack plugin
-  plugins: ['serverless-webpack'],
+  plugins: [
+    'serverless-webpack',
+    'serverless-offline',
+  ],
   provider: {
     name: 'aws',
     runtime: 'nodejs12.x',
