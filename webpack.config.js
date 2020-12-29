@@ -1,9 +1,8 @@
-const path = require('path');
-const webpack = require('webpack');
-const slsw = require('serverless-webpack');
-const nodeExternals = require('webpack-node-externals');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const { profileEnd } = require('console')
+const path = require('path')
+const webpack = require('webpack')
+const slsw = require('serverless-webpack')
+const nodeExternals = require('webpack-node-externals')
+// const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 module.exports = {
   context: __dirname,

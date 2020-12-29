@@ -1,7 +1,7 @@
 import { ErrorRequestHandler, RequestHandler } from "express"
 import { ValidateError } from "tsoa"
 
-export const handleError: ErrorRequestHandler = (err, req, res, next) => {
+export const handleError: ErrorRequestHandler = (err, req, res, _next) => {
   if (err instanceof ValidateError) {
     console.warn(`Caught Validation Error for ${req.path}:`, err.fields)
     return res.status(422).json({

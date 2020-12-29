@@ -10,13 +10,13 @@ app.use(awsServerlessExpressMiddleware.eventContext())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 if (process.env.TST_SLS_STAGE !== 'prod') {
-    const swaggerJson = require("./swagger.json")
-    app.use('/docs', swaggerUi.serveWithOptions({redirect: false}));
-    app.get('/docs', swaggerUi.setup(swaggerJson));
+  const swaggerJson = require("./swagger.json")
+  app.use('/docs', swaggerUi.serveWithOptions({redirect: false}))
+  app.get('/docs', swaggerUi.setup(swaggerJson))
 }
 
-app.use('/hello', (req,res) => res.send('world'))
-RegisterRoutes(app);
+app.use('/hello', (_req,res) => res.send('world'))
+RegisterRoutes(app)
 
 app.use(handle404NotFound)
 app.use(handleError)

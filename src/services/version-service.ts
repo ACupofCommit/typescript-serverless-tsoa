@@ -1,4 +1,4 @@
-import { Version } from "../models/version";
+import { Version } from "../models/version"
 
 export class VersionService {
   public get(): Version {

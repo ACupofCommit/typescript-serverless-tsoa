@@ -1,5 +1,5 @@
-import { Body, Controller, Get, Path, Post, Query, Route, SuccessResponse } from "tsoa"
-import { Version } from "../models/version";
+import { Controller, Get, Path, Route } from "tsoa"
+import { Version } from "../models/version"
 import { VersionService } from "../services/version-service"
 
 @Route("version")

@@ -1,4 +1,4 @@
-import type { AWS } from '@serverless/typescript';
+import type { AWS } from '@serverless/typescript'
 
 const serverlessConfiguration: AWS = {
   service: 'typescript-serverless-tsoa',
@@ -41,4 +41,4 @@ const serverlessConfiguration: AWS = {
   }
 }
 
-module.exports = serverlessConfiguration;
+module.exports = serverlessConfiguration
