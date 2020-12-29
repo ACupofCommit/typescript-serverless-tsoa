@@ -8,6 +8,7 @@ import { handle404NotFound, handleError } from './core/error-handler'
 const app = express()
 app.use(awsServerlessExpressMiddleware.eventContext())
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 
 if (process.env.TST_SLS_STAGE !== 'prod') {
   const swaggerJson = require("./swagger.json")

@@ -30,13 +30,10 @@ const serverlessConfiguration: AWS = {
     hello: {
       handler: 'src/handler.index',
       events: [
-        {
-          http: {
-            method: 'get',
-            path: '/{pathname+}'
-          }
-        }
-      ]
+        ...['post','get','put','delete'].map(method => ({
+          http: { method, path: '/{pathname+}' }
+        })),
+      ],
     }
   }
 }
