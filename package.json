@@ -4,8 +4,11 @@
   "description": "Serverless webpack example using Typescript",
   "main": "handler.js",
   "scripts": {
-    "dev": "sls offline start",
-    "tsoa": "ts-node -- tsoa.ts"
+    "tsoa": "ts-node -- tsoa.ts",
+    "tsoa:watch": "nodemon --config nodemon-tsoa.json",
+    "sls:offline": "sls offline start --httpPort=${HTTP_PORT:-3000}",
+    "dev": "concurrently yarn:sls:offline yarn:tsoa:watch",
+    "deploy": "yarn tsoa && sls deploy --verbose"
   },
   "dependencies": {
     "aws-serverless-express": "^3.4.0",
