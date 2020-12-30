@@ -9,8 +9,9 @@ export async function expressAuthentication(
   securityName: string,
   scopes: string[]=[],
 ): Promise<User> {
-  const [authType, accessToken, ...rest] = req.headers.authorization?.split(' ') || []
   if (securityName !== "bearerAuth") throw new TSTError('UNKNOWN_SERVER_ERROR', 'Unknown securityName in ' + req.path)
+
+  const [authType, accessToken, ...rest] = req.headers.authorization?.split(' ') || []
   if (authType !== 'Bearer' || !accessToken || rest.length > 0) {
     throw new TSTError('AUTH_REQUIRE', `Set authorization header like "Bearer <accessToken>"`)
   }

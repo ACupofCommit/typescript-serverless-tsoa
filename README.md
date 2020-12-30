@@ -14,8 +14,8 @@ $ yarn
 ### Environments
 
 ```
-export TST_SLS_STAGE=local
-export TST_REVISION='your-git-revision'
+export ENV_SLS_STAGE=local
+export ENV_REVISION='your-git-revision'
 ```
 
 ```
