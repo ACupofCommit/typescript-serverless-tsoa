@@ -19,9 +19,17 @@ const serverlessConfiguration: AWS = {
   frameworkVersion: '2',
   custom: {
     webpack: {
+      packager: 'yarn',
       webpackConfig: './webpack.config.js',
-      includeModules: true
-    }
+      includeModules: {
+        forceExclude: ['aws-sdk'],
+      },
+    },
+    "serverless-offline": {
+      lambdaPort: process.env.HTTP_PORT
+        ? Number(process.env.HTTP_PORT) + 2
+        : 3002,
+    },
   },
   // Add the serverless-webpack plugin
   plugins: [
@@ -42,7 +50,7 @@ const serverlessConfiguration: AWS = {
     },
   },
   functions: {
-    hello: {
+    index: {
       handler: 'src/handler.index',
       events: [
         ...['post','get','put','delete'].map(method => ({

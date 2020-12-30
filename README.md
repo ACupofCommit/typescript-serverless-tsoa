@@ -20,6 +20,9 @@ export ENV_REVISION='your-git-revision'
 
 ```
 $ yarn dev
+
+# If you want use other port, (It doesn't support in Windows)
+$ HTTP_PORT=3030 yarn dev
 ```
 
 - Open [http://localhost:3000/local/version](http://localhost:3000/local/version) with your browser to see the result.

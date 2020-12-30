@@ -9,7 +9,7 @@ module.exports = {
   entry: slsw.lib.entries,
   devtool: slsw.lib.webpack.isLocal ? 'eval-cheap-module-source-map' : 'source-map',
   resolve: {
-    extensions: ['.mjs', '.json', '.ts'],
+    extensions: ['.mjs','.json','.ts','.js'],
     symlinks: false,
     cacheWithContext: false,
   },
@@ -22,7 +22,10 @@ module.exports = {
     concatenateModules: false,
   },
   target: 'node',
-  externals: [nodeExternals()],
+  // externals: [nodeExternals()],  // It upload all files in `node_modules` directory into S3
+  // So, use the following configuration to upload only packages that are difficult to bundle.
+  // (aws-sdk will be forced excluded by serverless-webpack plugin configuration in serverless.ts)
+  externals: ['aws-sdk','tsoa','express','swagger-ui-express'],
   module: {
     rules: [
       // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`

@@ -8,6 +8,7 @@
     "tsoa:watch": "nodemon --config nodemon-tsoa.json",
     "sls:offline": "sls offline start --httpPort=${HTTP_PORT:-3000}",
     "dev": "concurrently yarn:sls:offline yarn:tsoa:watch",
+    "clean": "rimraf .webpack && rimraf .serverless && rimraf src/swagger.json && rimraf src/routes.ts",
     "deploy": "yarn tsoa && sls deploy --verbose"
   },
   "dependencies": {
@@ -29,6 +30,7 @@
     "@types/swagger-ui-express": "^4.1.2",
     "concurrently": "^5.3.0",
     "nodemon": "^2.0.6",
+    "rimraf": "^3.0.2",
     "serverless": "^2.16.1",
     "serverless-offline": "^6.8.0",
     "serverless-webpack": "^5.2.0",
