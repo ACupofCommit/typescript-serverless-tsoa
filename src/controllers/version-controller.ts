@@ -10,7 +10,7 @@ interface BodyParam {
   email: string
 }
 
-@Route("version")
+@Route("/version")
 export class VersionController extends Controller {
   @Get("/")
   public async getVersion(): Promise<Version> {
