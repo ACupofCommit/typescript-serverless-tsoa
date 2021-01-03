@@ -1,4 +1,4 @@
-import { EnvSlsStage } from "../types"
+import { EnvSlsStage } from "../types/env.type"
 
 export interface Version {
   node: string

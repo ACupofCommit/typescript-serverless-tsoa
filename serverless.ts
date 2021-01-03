@@ -1,5 +1,6 @@
 import type { AWS } from '@serverless/typescript'
-import { Envs, isEnvSlsStage, isNotEmptyString} from './src/types'
+import { Envs, isEnvSlsStage } from './src/types/env.type'
+import { isNotEmptyString } from './src/utils/typecheck.util'
 
 const {
   ENV_SLS_STAGE, ENV_REVISION,

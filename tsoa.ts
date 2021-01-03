@@ -5,7 +5,7 @@ import { ExtendedSpecConfig, ExtendedRoutesConfig } from "tsoa"
   const specOptions: ExtendedSpecConfig = {
     "entryFile": "src/app.ts",
     "noImplicitAdditionalProperties": "throw-on-extras",
-    "controllerPathGlobs": ["src/**/*-controller.ts"],
+    "controllerPathGlobs": ["src/**/*.controller.ts"],
     description: `
 # typescript-serverless-tsoa Example
 - https://github.com/ACupofCommit/typescript-serverless-tsoa
@@ -29,9 +29,9 @@ import { ExtendedSpecConfig, ExtendedRoutesConfig } from "tsoa"
   const routeOptions: ExtendedRoutesConfig = {
     "entryFile": "src/app.ts",
     "noImplicitAdditionalProperties": "throw-on-extras",
-    "controllerPathGlobs": ["src/**/*-controller.ts"],
+    "controllerPathGlobs": ["src/**/*.controller.ts"],
     routesDir: "src",
-    authenticationModule: './src/core/auth-middleware.ts',
+    authenticationModule: './src/middlewares/auth.middleware.ts',
   }
 
   await generateSpec(specOptions)

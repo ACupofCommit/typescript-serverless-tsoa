@@ -12,9 +12,11 @@
     "deploy": "yarn tsoa && sls deploy --verbose"
   },
   "dependencies": {
+    "await-to-js": "^2.1.1",
     "aws-serverless-express": "^3.4.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "generic-type-guard": "^3.3.3",
     "lodash": "^4.17.20",
     "source-map-support": "^0.5.19",
     "swagger-ui-express": "^4.1.6",

@@ -1255,6 +1255,11 @@ at-least-node@^1.0.0:
   resolved "https://registry.yarnpkg.com/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
   integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
 
+await-to-js@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/await-to-js/-/await-to-js-2.1.1.tgz#c2093cd5a386f2bb945d79b292817bbc3f41b31b"
+  integrity sha512-CHBC6gQGCIzjZ09tJ+XmpQoZOn4GdWePB4qUweCaKNJ0D3f115YdhmYVTZ4rMVpiJ3cFzZcTYK1VMYEICV4YXw==
+
 aws-sdk@^2.624.0, aws-sdk@^2.815.0:
   version "2.817.0"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.817.0.tgz#3a97b690b0ec494cf8ee927affb3973cf26abcc8"
@@ -2963,6 +2968,11 @@ gauge@~2.7.3:
     string-width "^1.0.1"
     strip-ansi "^3.0.1"
     wide-align "^1.1.0"
+
+generic-type-guard@^3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/generic-type-guard/-/generic-type-guard-3.3.3.tgz#954b846fecff91047cadb0dcc28930811fcb9dc1"
+  integrity sha512-SXraZvNW/uTfHVgB48iEwWaD1XFJ1nvZ8QP6qy9pSgaScEyQqFHYN5E6d6rCsJgrvlWKygPrNum7QeJHegzNuQ==
 
 get-caller-file@^2.0.1:
   version "2.0.5"

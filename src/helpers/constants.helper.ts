@@ -1,6 +1,7 @@
-import { Envs } from "../types"
+import { Envs } from "../types/env.type"
 
 // The `as any` type assumption can be used only when the type check completion is guaranteed at build time.
+
 // You can do this by adding a type checking codes to the `serverless.ts` file.
 const envs: Envs = process.env as any
 export const ENV_SLS_STAGE = envs.ENV_SLS_STAGE

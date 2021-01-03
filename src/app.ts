@@ -3,7 +3,7 @@ import * as awsServerlessExpressMiddleware from 'aws-serverless-express/middlewa
 import * as bodyParser from 'body-parser'
 import * as swaggerUi from "swagger-ui-express"
 import { RegisterRoutes } from "./routes"
-import { handle404NotFound, handleError } from './core/error-handler'
+import { handle404NotFound, handleError } from './middlewares/error-handle.middleware'
 
 const app = express()
 app.use(awsServerlessExpressMiddleware.eventContext())
