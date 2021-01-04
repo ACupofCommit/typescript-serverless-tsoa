@@ -1,4 +1,4 @@
-import { AWS_REGION, AWS_LAMBDA_FUNCTION_NAME, AWS_LAMBDA_FUNCTION_MEMORY_SIZE, AWS_LAMBDA_FUNCTION_VERSION, ENV_REVISION, ENV_SLS_STAGE } from "../helpers/constants.helper"
+import { AWS_REGION, AWS_LAMBDA_FUNCTION_NAME, AWS_LAMBDA_FUNCTION_MEMORY_SIZE, AWS_LAMBDA_FUNCTION_VERSION, ENV_REVISION, ENV_SLS_STAGE } from "../models/constants.model"
 import { Version } from "../models/version.model"
 
 export class VersionService {
