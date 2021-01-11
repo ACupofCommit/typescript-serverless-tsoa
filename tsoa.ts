@@ -1,5 +1,5 @@
-import { generateRoutes, generateSpec } from "tsoa"
-import { ExtendedSpecConfig, ExtendedRoutesConfig } from "tsoa"
+import { generateRoutes, generateSpec } from "@tsoa/cli"
+import { ExtendedSpecConfig, ExtendedRoutesConfig } from "@tsoa/cli"
 
 (async () => {
   const specOptions: ExtendedSpecConfig = {

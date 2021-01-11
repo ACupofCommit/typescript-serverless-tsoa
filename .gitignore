@@ -13,3 +13,4 @@ jspm_packages
 /src/routes.ts
 /src/swagger.json
 /.envrc
+/build/

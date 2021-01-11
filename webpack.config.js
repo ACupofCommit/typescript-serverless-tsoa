@@ -25,7 +25,7 @@ module.exports = {
   // externals: [nodeExternals()],  // It upload all files in `node_modules` directory into S3
   // So, use the following configuration to upload only packages that are difficult to bundle.
   // (aws-sdk will be forced excluded by serverless-webpack plugin configuration in serverless.ts)
-  externals: ['aws-sdk','tsoa','express','swagger-ui-express'],
+  externals: ['aws-sdk','express','swagger-ui-express'],
   module: {
     rules: [
       // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`

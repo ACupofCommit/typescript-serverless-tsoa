@@ -1,5 +1,5 @@
+import { ValidateError } from "@tsoa/runtime"
 import { ErrorRequestHandler, RequestHandler } from "express"
-import { ValidateError } from "tsoa"
 import { statusCodes, TSTError } from "../models/error.model"
 
 export const handleError: ErrorRequestHandler = (err, req, res, _next) => {

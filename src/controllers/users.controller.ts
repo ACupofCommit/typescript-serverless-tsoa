@@ -1,4 +1,4 @@
-import { Controller, Delete, Get, Path, Request, Route, Security } from "tsoa"
+import { Controller, Delete, Get, Path, Request, Route, Security } from "@tsoa/runtime"
 import { TSTError } from "../models/error.model"
 import { UsersService } from "../services/users.service"
 import { ResDelete, ResItem, ResList } from "../types/res.type"
