@@ -1,12 +1,10 @@
 import * as express from 'express'
-import * as awsServerlessExpressMiddleware from 'aws-serverless-express/middleware'
 import * as bodyParser from 'body-parser'
 import * as swaggerUi from "swagger-ui-express"
 import { RegisterRoutes } from "./routes"
 import { handle404NotFound, handleError } from './middlewares/error-handle.middleware'
 
 const app = express()
-app.use(awsServerlessExpressMiddleware.eventContext())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 

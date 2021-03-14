@@ -9,7 +9,7 @@ export class UsersController extends Controller {
   /**
    * Get Users list
    */
-  @Get("/")
+  @Get()
   @Security("bearerAuth", ['users:list'])
   public async list(): Promise<ResList<User>> {
     const items = await new UsersService().list()

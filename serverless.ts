@@ -39,6 +39,7 @@ const serverlessConfiguration: AWS = {
   ],
   provider: {
     name: 'aws',
+    lambdaHashingVersion: "20201221",
     runtime: 'nodejs12.x',
     stage: '${env:ENV_SLS_STAGE, "local"}',
     apiGateway: {
